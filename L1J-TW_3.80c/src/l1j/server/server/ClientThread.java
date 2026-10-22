@@ -269,7 +269,7 @@ public class ClientThread implements Runnable, PacketOutput {
 				int opcode = data[0] & 0xFF;
 
 				// 處理多重登入
-				if (opcode == Opcodes.C_OPCODE_BEANFUNLOGINPACKET || opcode == Opcodes.C_OPCODE_CHANGECHAR) {
+				if (opcode == Opcodes.C_OPCODE_CHANGECHAR && _account != null) {
 					_loginStatus = 1;
 				}
 				if (opcode == Opcodes.C_OPCODE_LOGINTOSERVER) {
@@ -502,6 +502,8 @@ public class ClientThread implements Runnable, PacketOutput {
 
 	public void setAccount(Account account) {
 		_account = account;
+		// 普通登入與 beanfun 登入都在認證成功後開放角色登入。
+		_loginStatus = account == null ? 0 : 1;
 	}
 
 	public Account getAccount() {
