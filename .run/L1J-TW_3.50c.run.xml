@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="L1J-TW 3.50c (Java 21)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="l1j.server.Server" />
+    <module name="l1jtw-350c" />
+    <option name="VM_PARAMETERS" value="-Xms512m -Xmx1g -Dfile.encoding=UTF-8 -Duser.timezone=Asia/Taipei" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/L1J-TW_3.50c" />
+    <shortenClasspath name="ARGS_FILE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

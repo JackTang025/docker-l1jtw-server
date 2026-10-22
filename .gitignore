@@ -4,3 +4,12 @@ L1J-TW_3.50c/rates.properties
 L1J-TW_3.50c/server.properties
 .env
 .DS_Store
+
+# Local IDE settings and generated Java 21 build/runtime files.
+.idea/
+*.iml
+**/target/
+.cache/
+**/log/
+**/mapcache/
+L1J-TW_3.50c/maps/*.txt
